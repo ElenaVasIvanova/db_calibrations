@@ -1,7 +1,6 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
 const PORT = process.env.PORT
-const cors = require("cors");
 const colors = require('colors')
 const connectDB = require('./config/db')
 const {errorHandler} = require('./middleware/errorMiddleware')
@@ -10,7 +9,7 @@ const {errorHandler} = require('./middleware/errorMiddleware')
 connectDB()
 
 const app = express()
-app.use(cors())
+
 
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
