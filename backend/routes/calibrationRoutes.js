@@ -5,7 +5,7 @@ const {getCalibrations, createCalibration, getCalibration, updateCalibration,
 	const {protect} = require('../middleware/authMiddleware')
 //Re-route
 const noteRouter = require('./noteRoutes')
-router.use('https://calibration.onrender.com/:calibrationId/notes', noteRouter)
-router.route('https://calibration.onrender.com/').post(protect, createCalibration).get(protect, getCalibrations)
-router.route('https://calibration.onrender.com/:id').get(protect, getCalibration).delete(protect, deleteCalibration).put(protect, updateCalibration)
+router.use('/:calibrationId/notes', noteRouter)
+router.route('/').post(protect, createCalibration).get(protect, getCalibrations)
+router.route('/:id').get(protect, getCalibration).delete(protect, deleteCalibration).put(protect, updateCalibration)
 module.exports = router
