@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production'){
 })}
 
 app.use(errorHandler)
-app.listen(port, () => console.log(colors.green(`Server started on port ${port}`))
+https.createServer(app).listen(port, () => console.log(colors.green(`Server started on port ${port}`))
 	)
 
 
