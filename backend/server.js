@@ -19,7 +19,7 @@ const app = express()
 //   });
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
-
+const PORT = process.env.PORT || 500;
 
 app.use('/api/users', require('./routes/userRoutes'))
 app.use('/api/calibrations', require('./routes/calibrationRoutes'))
