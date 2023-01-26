@@ -27,9 +27,7 @@ app.use('/api/allcalibrations', require('./routes/allcalibrationRoutes'))
 if (process.env.NODE_ENV === 'production'){
 	app.use(express.static(path.join(__dirname, '../frontend/build')))
 	app.get('*', (req, res) => res.sendFile(__dirname, '../', 'frontend', 'build', 'index.html'))
-} else { app.get('/', (req, res) =>{
-	res.status(200)
-})}
+} )}
 
 app.use(errorHandler)
 app.listen(port, () => console.log(colors.green(`Server started on port ${port}`))
