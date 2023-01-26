@@ -21,9 +21,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 
-app.use('https://calibration.onrender.com/api/users', require('./routes/userRoutes'))
-app.use('https://calibration.onrender.com/api/calibrations', require('./routes/calibrationRoutes'))
-app.use('https://calibration.onrender.com/api/allcalibrations', require('./routes/allcalibrationRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
+app.use('/api/calibrations', require('./routes/calibrationRoutes'))
+app.use('/api/allcalibrations', require('./routes/allcalibrationRoutes'))
 if (process.env.NODE_ENV === 'production'){
 	app.use(express.static(path.join(__dirname, '../frontend/build')))
 	app.get('*', (req, res) => res.sendFile(__dirname, '../', 'frontend', 'build', 'index.html'))
