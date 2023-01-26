@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
    "private": true,
-  "proxy": "https://calibration.onrender.com",
+  "proxy": "https://db-calibrations.onrender.com",
    "homepage": "https://github.com/ElenaVasIvanova/db_calibrations",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
