@@ -3,6 +3,7 @@
   "version": "0.1.0",
    "private": true,
   "proxy": "https://calibration.onrender.com",
+   "homepage": "https://github.com/ElenaVasIvanova/db_calibrations",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
