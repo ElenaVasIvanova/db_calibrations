@@ -15,15 +15,15 @@ const app = express()
 // app.use(function(req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//   next(); '/api/users'
+//   next(); 
 //   });
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 
-app.use('/users', require('./routes/userRoutes'))
-app.use('/calibrations', require('./routes/calibrationRoutes'))
-app.use('/allcalibrations', require('./routes/allcalibrationRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
+app.use('/api/calibrations', require('./routes/calibrationRoutes'))
+app.use('/api/allcalibrations', require('./routes/allcalibrationRoutes'))
 if (process.env.NODE_ENV === 'production'){
 	app.use(express.static(path.join(__dirname, '../frontend/build')))
 	app.get('*', (req, res) => res.sendFile(__dirname, '../', 'frontend', 'build', 'index.html'))
