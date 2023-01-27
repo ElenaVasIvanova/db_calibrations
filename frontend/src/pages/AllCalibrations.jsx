@@ -45,7 +45,8 @@ import {columns_deviation_meas_Viva_warm} from '../components/columns_deviation_
 import {columns_deviation_meas_OSRAM_6500} from '../components/columns_deviation_meas/columns_deviation_meas_OSRAM_6500'
 import {columns_deviation_meas_Ll_6500} from '../components/columns_deviation_meas/columns_deviation_meas_Ll_6500'
 import {columns_deviation_meas_lng_1} from '../components/columns_deviation_meas/columns_deviation_meas_lng_1'
-
+const REACT_APP_SERVER_URL = 'https://db-calibrations-loft-api.onrender.com'
+const api_url_allcall = REACT_APP_SERVER_URL + '/api/allcalibrations'
 
 function AllCalibrations() {
 
@@ -184,7 +185,7 @@ function AllCalibrations() {
     const fetchData = async (client) =>{
       setLoading(true);
       try {
-        const {data: response} = await axios.get(`/api/allcalibrations`);
+        const {data: response} = await axios.get(api_url_allcall);
         setData(response);
       } catch (error) {
         console.error(error.message);
@@ -193,7 +194,7 @@ function AllCalibrations() {
     }
     fetchData();
   }, []);
-  /*{data.map(calibration => (<span key={calibration._id}>{calibration.client}</span>))}*/
+  {data.map(calibration => (<span key={calibration._id}>{calibration.client}</span>))}
 
 
 
