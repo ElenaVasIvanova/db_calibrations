@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = 'http://db-calibrations-loft-api.onrender.com/calibrations/'
+const API_URL = 'https://db-calibrations-loft-api.onrender.com/calibrations/'
 const getNotes = async (calibrationId, token) => {
 	const config = {
 		headers: {
