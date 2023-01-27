@@ -32,7 +32,6 @@ import {columns_meas_Ll_6500_2} from '../components/columns_meas/columns_meas_Ll
 import {columns_meas_lng_1} from '../components/columns_meas/columns_meas_lng_1'
 import {columns_meas_lng_1_2} from '../components/columns_meas/columns_meas_lng_1_2'
 import {columns_CS_sources} from '../components/columns_CS_sources'
-
 import {columns_deviation_meas_mhl} from '../components/columns_deviation_meas/columns_deviation_meas_mhl'
 import {columns_deviation_meas_lng} from '../components/columns_deviation_meas/columns_deviation_meas_lng'
 import {columns_deviation_meas_Ll_philips} from '../components/columns_deviation_meas/columns_deviation_meas_Ll_philips'
@@ -63,7 +62,6 @@ function AllCalibrations() {
   const [show_Ll_6500, setshow_Ll_6500] = useState("");
   const [show_lng_1, setshow_lng_1] = useState("");
   const [show_CS_sources, setshow_CS_sources] = useState("");
-
   const [deviation_show_mhl, setdeviation_show_mhl] = useState("");
   const [deviation_show_lng, setdeviation_show_lng] = useState("");
   const [deviation_show_Ll_philips, setdeviation_show_Ll_philips] = useState("");
@@ -194,8 +192,7 @@ function AllCalibrations() {
     }
     fetchData();
   }, []);
-  {data.map(calibration => (<span key={calibration._id}>{calibration.client}</span>))}
-
+  
 
 
   return (
