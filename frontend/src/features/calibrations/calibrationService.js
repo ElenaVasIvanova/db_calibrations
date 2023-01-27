@@ -1,4 +1,5 @@
 import axios from "axios";
+const REACT_APP_SERVER_URL = 'https://db-calibrations-loft-api.onrender.com'
 const API_URL = REACT_APP_SERVER_URL + '/api/calibrations/'
 const createCalibration = async (calibrationData, token) => {
   const config = {
