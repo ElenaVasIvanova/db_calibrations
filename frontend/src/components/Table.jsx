@@ -34,9 +34,8 @@ const Table = ({columns, data}) => {
   } = useTable({
     columns,
     data,
-    defaultColumn,
-   
-  },
+    defaultColumn
+   },
   useFilters,
   useGlobalFilter, useSortBy, usePagination, useColumnOrder,
   )
