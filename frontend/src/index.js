@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 const container = document.getElementById('root');
 const root = createRoot(container);
-
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 root.render(
 	<React.StrictMode>
 	<Provider store={store}>
