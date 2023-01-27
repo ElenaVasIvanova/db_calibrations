@@ -21,9 +21,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 
-app.use('http://db-calibrations-loft-api.onrender.com/users', require('./routes/userRoutes'))
-app.use('http://db-calibrations-loft-api.onrender.com/calibrations', require('./routes/calibrationRoutes'))
-app.use('http://db-calibrations-loft-api.onrender.com/allcalibrations', require('./routes/allcalibrationRoutes'))
+app.use('https://db-calibrations-loft-api.onrender.com/users', require('./routes/userRoutes'))
+app.use('https://db-calibrations-loft-api.onrender.com/calibrations', require('./routes/calibrationRoutes'))
+app.use('https://db-calibrations-loft-api.onrender.com/allcalibrations', require('./routes/allcalibrationRoutes'))
 
 if (process.env.NODE_ENV === 'production'){
 	app.use(express.static(path.join(__dirname, '../frontend/build')))
