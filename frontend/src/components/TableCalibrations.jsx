@@ -21,7 +21,7 @@ function TableCalibrations() {
     }
     fetchData();
   }, []);
-  {data.map(calibration => (<span key={calibration._id}>{calibration.client}</span>))}
+  /*{data.map(calibration => (<span key={calibration._id}>{calibration.client}</span>))}*/
 
 const columns_cal = [
 {
