@@ -9,7 +9,7 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 root.render(
-	console.log('SERVER_URL')
+	
 	<React.StrictMode>
 	<Provider store={store}>
 	<App />
