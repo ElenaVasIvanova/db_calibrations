@@ -21,9 +21,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 
-app.use('REACT_APP_SERVER_URL/api/users', require('./routes/userRoutes'))
-app.use('REACT_APP_SERVER_URL/api/calibrations', require('./routes/calibrationRoutes'))
-app.use('REACT_APP_SERVER_URL/api/allcalibrations', require('./routes/allcalibrationRoutes'))
+app.use('REACT_APP_SERVER_URL/users', require('./routes/userRoutes'))
+app.use('REACT_APP_SERVER_URL/calibrations', require('./routes/calibrationRoutes'))
+app.use('REACT_APP_SERVER_URL/allcalibrations', require('./routes/allcalibrationRoutes'))
 
 if (process.env.NODE_ENV === 'production'){
 	app.use(express.static(path.join(__dirname, '../frontend/build')))
