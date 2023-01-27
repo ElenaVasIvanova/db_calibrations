@@ -5,8 +5,7 @@ const colors = require('colors')
 const connectDB = require('./config/db')
 const {errorHandler} = require('./middleware/errorMiddleware')
 const PORT = process.env.PORT
-//Connect to database
-connectDB()
+
 
 const app = express()
 
@@ -16,6 +15,8 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+//Connect to database
+connectDB()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
