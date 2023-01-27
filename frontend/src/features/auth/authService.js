@@ -1,5 +1,5 @@
 import axios from 'axios'
-const API_URL = '/users'
+const API_URL = 'https://db-calibrations-loft-api.onrender.com/users'
 //Register user
 const register = async (userData) => {
 	const response = await axios.post(API_URL, userData)
