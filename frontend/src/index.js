@@ -5,6 +5,7 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import REACT_APP_SERVER_URL from './config';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
